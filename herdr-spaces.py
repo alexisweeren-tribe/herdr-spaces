@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-RUN_INTERVAL = 300  # launchd fires us every 5 minutes; we poll once and exit
+RUN_INTERVAL = 600  # launchd fires us every 10 minutes; we poll once and exit
 MAX_LABEL_LEN = 45
 MAX_WORDS = 4
 STATE_FILE = Path.home() / ".config" / "herdr-spaces" / "state.json"

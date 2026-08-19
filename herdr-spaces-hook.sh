@@ -1,5 +1,5 @@
 #!/bin/sh
-# Claude Code hook: 5 minutes after session start, rename the workspace.
+# Claude Code hook: 10 minutes after session start, rename the workspace.
 # Runs in the background so Claude Code doesn't wait.
 set -eu
 
@@ -9,7 +9,7 @@ set -eu
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LOCK_DIR="$HOME/.config/herdr-spaces/locks"
 LOCK_FILE="$LOCK_DIR/${HERDR_PANE_ID}.pid"
-DELAY=300
+DELAY=600
 
 mkdir -p "$LOCK_DIR"
 
